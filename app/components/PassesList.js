@@ -61,7 +61,7 @@ class PassesList extends Component {
                   <tr>
                     <th scope="col">Web</th>
                     <th scope="col">User</th>
-                    <th scope="col">this.stateword</th>
+                    <th scope="col">Password</th>
                     <th scope="col">Email</th>
                     <th scope="col">Claves</th>
                     <th scope="col">Observations</th>
@@ -119,6 +119,24 @@ class PassesList extends Component {
                 aria-label="Search"
                 onChange={this.filterUpdate}
               />
+              <p>
+                <label>
+                  <input class="with-gap" name="group3" type="radio" checked />
+                  <span>Web</span>
+                </label>
+              </p>
+              <p>
+                <label>
+                  <input class="with-gap" name="group3" type="radio" />
+                  <span>User</span>
+                </label>
+              </p>
+              <p>
+                <label>
+                  <input class="with-gap" name="group3" type="radio" />
+                  <span>Email</span>
+                </label>
+              </p>
             </form>
           </div>
 
