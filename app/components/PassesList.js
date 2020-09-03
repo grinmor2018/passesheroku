@@ -31,8 +31,10 @@ class PassesList extends Component {
   }
 
   async deletePass(id) {
-    await axios.delete("/api/functions/" + id);
-    this.getPasses();
+    if (confirm("Are you sure to delete it?")) {
+      await axios.delete("/api/functions/" + id);
+      this.getPasses();
+    }
   }
 
   filterUpdate(e) {
