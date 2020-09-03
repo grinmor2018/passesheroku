@@ -113,29 +113,24 @@ class PassesList extends Component {
             <h3>Passes list</h3>
             <form className="col s12">
               <div className="row">
-                <p>
-                  <label>
-                    <input
-                      class="with-gap"
-                      name="search3"
-                      type="radio"
-                      checked
-                    />
-                    <span>Web</span>
-                  </label>
-                </p>
-                <p>
-                  <label>
-                    <input class="with-gap" name="search3" type="radio" />
-                    <span>User</span>
-                  </label>
-                </p>
-                <p>
-                  <label>
-                    <input class="with-gap" name="search3" type="radio" />
-                    <span>Email</span>
-                  </label>
-                </p>
+              <div className="form-check">
+              <input className="form-check-input" type="radio" name="colSearch" id="colSearch1" value="option1" checked/>
+              <label className="form-check-label" for="colSearch1">
+                Web
+              </label>
+            </div>
+            <div className="form-check">
+              <input className="form-check-input" type="radio" name="colSearch" id="colSearch2" value="option2"/>
+              <label className="form-check-label" for="colSearch2">
+                User
+              </label>
+            </div>
+            <div className="form-check">
+              <input className="form-check-input" type="radio" name="colSearch" id="colSearch3" value="option3"/>
+              <label className="form-check-label" for="colSearch3">
+                Email
+              </label>
+            </div>
               </div>
               <div className="row">
                 <div className="col s12">
