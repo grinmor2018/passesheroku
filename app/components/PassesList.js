@@ -45,11 +45,13 @@ class PassesList extends Component {
 
   render() {
     if (this.state.showing) {
+      {
+        /*Show one pass*/
+      }
       return (
         <div className="container p-4">
           <div className="card grey lighten-1 p-4">
             <h3>Show a pass</h3>
-            {/*Comments*/}
           </div>
 
           <div className="card grey lighten-2 p-4">
@@ -102,6 +104,9 @@ class PassesList extends Component {
         </div>
       );
     } else {
+      {
+        /*Show all*/
+      }
       return (
         <div className="container p-4">
           <div className="card grey lighten-1 p-4">
@@ -139,7 +144,7 @@ class PassesList extends Component {
                         .indexOf(this.state.filterText.toLowerCase()) >= 0
                     );
                   })
-                  .sort((a, b) => a.web - b.web)
+                  .sort((a, b) => a.web > b.web)
                   .map((pass) => {
                     return (
                       <tr
