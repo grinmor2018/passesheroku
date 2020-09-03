@@ -55,7 +55,7 @@ export default class CreatePass extends Component {
         "/api/functions/" + this.state._id,
         newPass
       );
-      M.toast({ html: "Pass edited" });
+      window.M.toast({ html: 'Pass edited' });
     } else {
       await axios.post("/api/functions", newPass);
       this.setState({
@@ -66,7 +66,7 @@ export default class CreatePass extends Component {
         clave: "",
         observations: "",
       });
-      M.toast({ html: "Pass added" });
+      window.M.toast({html: 'Pass added'});
     }
     window.location.href = "/";
   }
