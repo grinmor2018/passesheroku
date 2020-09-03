@@ -113,7 +113,7 @@ class PassesList extends Component {
             <h3>Passes list</h3>
             <form className="col s12">
               <div className="row">
-                <div className="col s1">
+                <p>
                   <label>
                     <input
                       class="with-gap"
@@ -123,19 +123,19 @@ class PassesList extends Component {
                     />
                     <span>Web</span>
                   </label>
-                </div>
-                <div className="col s1">
+                </p>
+                <p>
                   <label>
                     <input class="with-gap" name="search3" type="radio" />
                     <span>User</span>
                   </label>
-                </div>
-                <div className="col s1">
+                </p>
+                <p>
                   <label>
                     <input class="with-gap" name="search3" type="radio" />
                     <span>Email</span>
                   </label>
-                </div>
+                </p>
               </div>
               <div className="row">
                 <div className="col s12">
@@ -147,7 +147,6 @@ class PassesList extends Component {
                     aria-label="Search"
                     onChange={this.filterUpdate}
                   />
-                  <label for="search">Search</label>
                 </div>
               </div>
             </form>
