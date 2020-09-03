@@ -132,11 +132,13 @@ class PassesList extends Component {
               </p>
               <input
                 className="form-control mr-sm-2"
+                name="search"
                 type="search"
                 placeholder="Search"
                 aria-label="Search"
                 onChange={this.filterUpdate}
               />
+              <label for="search">Search</label>
             </form>
           </div>
 
