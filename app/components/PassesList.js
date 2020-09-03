@@ -111,26 +111,45 @@ class PassesList extends Component {
         <div className="container p-4">
           <div className="card grey lighten-1 p-4">
             <h3>Passes list</h3>
-            <form className="col s12">
+            <div className="col s12">
               <div className="row">
-              <div className="form-check">
-              <input className="form-check-input" type="radio" name="colSearch" id="colSearch1" value="option1" checked/>
-              <label className="form-check-label" for="colSearch1">
-                Web
-              </label>
-            </div>
-            <div className="form-check">
-              <input className="form-check-input" type="radio" name="colSearch" id="colSearch2" value="option2"/>
-              <label className="form-check-label" for="colSearch2">
-                User
-              </label>
-            </div>
-            <div className="form-check">
-              <input className="form-check-input" type="radio" name="colSearch" id="colSearch3" value="option3"/>
-              <label className="form-check-label" for="colSearch3">
-                Email
-              </label>
-            </div>
+                <div className="form-check">
+                  <input
+                    className="form-check-input"
+                    type="radio"
+                    name="colSearch"
+                    id="colSearch1"
+                    value="web"
+                    checked
+                  />
+                  <label className="form-check-label" for="colSearch1">
+                    Web
+                  </label>
+                </div>
+                <div className="form-check">
+                  <input
+                    className="form-check-input"
+                    type="radio"
+                    name="colSearch"
+                    id="colSearch2"
+                    value="user"
+                  />
+                  <label className="form-check-label" for="colSearch2">
+                    User
+                  </label>
+                </div>
+                <div className="form-check">
+                  <input
+                    className="form-check-input"
+                    type="radio"
+                    name="colSearch"
+                    id="colSearch3"
+                    value="email"
+                  />
+                  <label className="form-check-label" for="colSearch3">
+                    Email
+                  </label>
+                </div>
               </div>
               <div className="row">
                 <div className="col s12">
@@ -144,7 +163,7 @@ class PassesList extends Component {
                   />
                 </div>
               </div>
-            </form>
+            </div>
           </div>
 
           <div className="card grey lighten-2 p-4">
