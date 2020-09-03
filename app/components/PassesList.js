@@ -111,34 +111,45 @@ class PassesList extends Component {
         <div className="container p-4">
           <div className="card grey lighten-1 p-4">
             <h3>Passes list</h3>
-            <form className="form-inline my-2 my-lg-0">
-              <p>
-                <label>
-                  <input class="with-gap" name="group3" type="radio" checked />
-                  <span>Web</span>
-                </label>
-              </p>
-              <p>
-                <label>
-                  <input class="with-gap" name="group3" type="radio" />
-                  <span>User</span>
-                </label>
-              </p>
-              <p>
-                <label>
-                  <input class="with-gap" name="group3" type="radio" />
-                  <span>Email</span>
-                </label>
-              </p>
-              <input
-                className="form-control mr-sm-2"
-                name="search"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-                onChange={this.filterUpdate}
-              />
-              <label for="search">Search</label>
+            <form className="col s12">
+              <div className="row">
+                <div className=" col s4">
+                  <label>
+                    <input
+                      class="with-gap"
+                      name="group3"
+                      type="radio"
+                      checked
+                    />
+                    <span>Web</span>
+                  </label>
+                </div>
+                <div className=" col s4">
+                  <label>
+                    <input class="with-gap" name="group3" type="radio" />
+                    <span>User</span>
+                  </label>
+                </div>
+                <div className=" col s4">
+                  <label>
+                    <input class="with-gap" name="group3" type="radio" />
+                    <span>Email</span>
+                  </label>
+                </div>
+              </div>
+              <div className="row">
+                <div className=" col s12">
+                  <input
+                    className="form-control mr-sm-2"
+                    name="search"
+                    type="search"
+                    placeholder="Search"
+                    aria-label="Search"
+                    onChange={this.filterUpdate}
+                  />
+                  <label for="search">Search</label>
+                </div>
+              </div>
             </form>
           </div>
 
