@@ -111,7 +111,7 @@ class PassesList extends Component {
         <div className="container p-4">
           <div className="card grey lighten-1 p-4">
             <h3>Passes list</h3>
-            <div className="col s12">
+            <div className="col-12">
               <div className="row">
                 <div className="form-check">
                   <input
@@ -152,9 +152,9 @@ class PassesList extends Component {
                 </div>
               </div>
               <div className="row">
-                <div className="col s12">
+                <div className="col-12">
                   <input
-                    className="form-control mr-sm-2"
+                    className="form-control"
                     name="search"
                     type="search"
                     placeholder="Search"
