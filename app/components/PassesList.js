@@ -139,6 +139,7 @@ class PassesList extends Component {
                         .indexOf(this.state.filterText.toLowerCase()) >= 0
                     );
                   })
+                  .sort((a, b) => a.web - b.web)
                   .map((pass) => {
                     return (
                       <tr
