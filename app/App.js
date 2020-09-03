@@ -1,24 +1,21 @@
-import React, { Component } from 'react';
-import {BrowserRouter as Router , Route } from 'react-router-dom';
+import React, { Component } from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
-import Navigation from './components/Navigation';
-import PassesList from './components/PassesList';
-import CreatePass from './components/CreatePass';
-import ShowPass from './components/ShowPass';
+import Navigation from "./components/Navigation";
+import PassesList from "./components/PassesList";
+import CreatePass from "./components/CreatePass";
 
 class App extends Component {
-  render(){
+  render() {
     return (
       <Router>
-        <Navigation/>
+        <Navigation />
         <Route path="/" exact component={PassesList} />
         <Route path="/edit/:id" component={CreatePass} />
         <Route path="/createPass" component={CreatePass} />
-        <Route path="/showPass" component={ShowPass} />
       </Router>
     );
   }
-  
-};
+}
 
 export default App;

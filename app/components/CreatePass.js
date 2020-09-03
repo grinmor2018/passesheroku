@@ -55,7 +55,7 @@ export default class CreatePass extends Component {
         "http://localhost:4000/api/functions/" + this.state._id,
         newPass
       );
-      //M.toast({html: 'Pass edited'});
+      M.toast({ html: "Pass edited" });
     } else {
       await axios.post("http://localhost:4000/api/functions", newPass);
       this.setState({
@@ -66,7 +66,7 @@ export default class CreatePass extends Component {
         clave: "",
         observations: "",
       });
-      //M.toast({html: 'Pass added'});
+      M.toast({ html: "Pass added" });
     }
     window.location.href = "/";
   }
@@ -163,9 +163,16 @@ export default class CreatePass extends Component {
                 <label for="observations">Observations</label>
               </div>
             </div>
-            <a onClick={this.addPass} className="btn-floating btn-large waves-effect waves-light blue">
-              <i className="material-icons">send</i>
-            </a>
+            <div className="row justify-content-center">
+              <div className="col-1">
+                <a
+                  onClick={this.addPass}
+                  className="btn-floating btn-large waves-effect waves-light blue"
+                >
+                  <i className="material-icons">send</i>
+                </a>
+              </div>
+            </div>
           </form>
         </div>
       </div>
