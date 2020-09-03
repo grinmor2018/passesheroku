@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
+import showPass from "./ShowPass";
+
 export default class PassesList extends Component {
   constructor() {
     super();
@@ -10,6 +12,7 @@ export default class PassesList extends Component {
       filterText: "",
     };
     this.filterUpdate = this.filterUpdate.bind(this);
+    this.showPass = this.showPass.bind(this);
   }
 
   componentDidMount() {
@@ -21,22 +24,26 @@ export default class PassesList extends Component {
     this.setState({ passes: res.data });
   }
 
-  async deletePass (id) {
+  async deletePass(id) {
     console.log(id);
     await axios.delete("http://localhost:4000/api/functions/" + id);
     this.getPasses();
-  };
+  }
 
-  filterUpdate (e) {
+  filterUpdate(e) {
     this.setState({
       filterText: e.target.value,
     });
-  };
+  }
+
+  show(pass){
+    this.showPass(pass);
+  }
 
   render() {
     return (
       <div className="container p-4">
-        <div className="card cyan lighten-4 p-4">
+        <div className="card grey lighten-1 p-4">
           <h3>Passes list</h3>
           <form className="form-inline my-2 my-lg-0">
             <input
@@ -49,8 +56,8 @@ export default class PassesList extends Component {
           </form>
         </div>
 
-        <div className="col-md-12">
-          <table className="table table-sm table-bordered table-hover">
+        <div className="card grey lighten-2 p-4">
+          <table className="table centered table-sm table-bordered table-hover">
             <thead>
               <tr>
                 <th scope="col">Web</th>
@@ -72,7 +79,7 @@ export default class PassesList extends Component {
                 })
                 .map((pass) => {
                   return (
-                    <tr key={pass._id}>
+                    <tr key={pass._id} onDoubleClick={() => this.show(pass)}>
                       <td>{pass.web}</td>
                       <td>{pass.user}</td>
                       <td>{pass.password}</td>
@@ -80,18 +87,18 @@ export default class PassesList extends Component {
                       <td>{pass.clave}</td>
                       <td>{pass.observations}</td>
                       <td>
-                        <Link
-                          className="btn btn-success"
-                          to={"/edit/" + pass._id}
-                        >
-                          <i className="material-icons">edit</i>
+                        <Link to={"/edit/" + pass._id}>
+                          <a class="btn-floating btn-small waves-effect waves-light green">
+                            <i className="material-icons">edit</i>
+                          </a>
                         </Link>
-                        <button
-                          className="btn btn-danger"
+
+                        <a
+                          className="btn-floating btn-small waves-effect waves-light red"
                           onClick={() => this.deletePass(pass._id)}
                         >
                           <i className="material-icons">delete</i>
-                        </button>
+                        </a>
                       </td>
                     </tr>
                   );

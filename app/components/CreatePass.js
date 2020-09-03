@@ -1,18 +1,18 @@
-import React, { Component } from 'react';
-import axios from 'axios';
+import React, { Component } from "react";
+import axios from "axios";
 
 export default class CreatePass extends Component {
   constructor() {
     super();
     this.state = {
-      web: '',
-      user: '',
-      password: '',
-      email: '',
-      clave: '',
-      observations: '',
+      web: "",
+      user: "",
+      password: "",
+      email: "",
+      clave: "",
+      observations: "",
       passes: [],
-      _id: '',
+      _id: "",
       editing: false,
     };
     this.addPass = this.addPass.bind(this);
@@ -55,7 +55,7 @@ export default class CreatePass extends Component {
         "http://localhost:4000/api/functions/" + this.state._id,
         newPass
       );
-     //M.toast({html: 'Pass edited'});
+      //M.toast({html: 'Pass edited'});
     } else {
       await axios.post("http://localhost:4000/api/functions", newPass);
       this.setState({
@@ -81,71 +81,91 @@ export default class CreatePass extends Component {
   render() {
     return (
       <div className="container p-4">
-        <div className="card cyan lighten-4 p-4">
+        <div className="card grey lighten-1 p-4">
           <h3>Create a new pass</h3>
           {/*Comments*/}
         </div>
 
-        <div className="card p-4">
-          <form className="form-group" onSubmit={this.addPass}>
-            <div className="row p-1">
-              <input
-                name="web"
-                onChange={this.handleChange}
-                type="text"
-                placeholder="web"
-                value={this.state.web}
-              ></input>
+        <div className="card grey lighten-2 p-4">
+          <form className="col 12" onSubmit={this.addPass}>
+            <div className="row">
+              <div class="input-field col s12">
+                <input
+                  className="autocomplete"
+                  name="web"
+                  onChange={this.handleChange}
+                  type="text"
+                  placeholder="web"
+                  value={this.state.web}
+                ></input>
+                <label for="web">Web</label>
+              </div>
             </div>
 
-            <div className="row p-1">
-              <input
-                name="user"
-                onChange={this.handleChange}
-                type="text"
-                placeholder="user"
-                value={this.state.user}
-              ></input>
+            <div className="row">
+              <div class="input-field col s6">
+                <input
+                  className="autocomplete"
+                  name="user"
+                  onChange={this.handleChange}
+                  type="text"
+                  placeholder="user"
+                  value={this.state.user}
+                ></input>
+                <label for="user">User</label>
+              </div>
+
+              <div className="input-field col s6">
+                <input
+                  className="autocomplete"
+                  name="password"
+                  onChange={this.handleChange}
+                  type="text"
+                  placeholder="password"
+                  value={this.state.password}
+                ></input>
+                <label for="password">Password</label>
+              </div>
             </div>
-            <div className="row p-1">
-              <input
-                name="password"
-                onChange={this.handleChange}
-                type="text"
-                placeholder="password"
-                value={this.state.password}
-              ></input>
+            <div className="row">
+              <div class="input-field col s12">
+                <input
+                  name="email"
+                  onChange={this.handleChange}
+                  type="text"
+                  placeholder="email"
+                  value={this.state.email}
+                ></input>
+                <label for="email">Email</label>
+              </div>
             </div>
-            <div className="row p-1">
-              <input
-                name="email"
-                onChange={this.handleChange}
-                type="text"
-                placeholder="email"
-                value={this.state.email}
-              ></input>
+            <div className="row">
+              <div class="input-field col s12">
+                <input
+                  name="clave"
+                  onChange={this.handleChange}
+                  type="text"
+                  placeholder="clave"
+                  value={this.state.clave}
+                ></input>
+                <label for="clave">Clave</label>
+              </div>
             </div>
-            <div className="row p-1">
-              <input
-                name="clave"
-                onChange={this.handleChange}
-                type="text"
-                placeholder="clave"
-                value={this.state.clave}
-              ></input>
+            <div className="row">
+              <div class="input-field col s12">
+                <textarea
+                  name="observations"
+                  onChange={this.handleChange}
+                  className="materialize-textarea"
+                  placeholder="observations"
+                  value={this.state.observations}
+                ></textarea>
+                <label for="observations">Observations</label>
+              </div>
             </div>
-            <div className="row p-1">
-              <textarea
-                name="observations"
-                onChange={this.handleChange}
-                className="materialize-textarea"
-                placeholder="observations"
-                value={this.state.observations}
-              ></textarea>
-            </div>
-            <button type="submit" className="btn btn-primary">
-              Send
-            </button>
+            <a onClick={this.addPass} className="btn-floating btn-large waves-effect waves-light blue">
+              <i className="material-icons">send</i>
+            </a>
           </form>
         </div>
       </div>
