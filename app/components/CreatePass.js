@@ -63,7 +63,7 @@ export default class CreatePass extends Component {
         clave: "",
         observations: "",
       });
-      setTimeout(() => {
+      await setTimeout(() => {
         window.M.toast({ html: "Pass added" });
       }, 2000);
     }
