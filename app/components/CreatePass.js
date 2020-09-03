@@ -20,12 +20,12 @@ export default class CreatePass extends Component {
   }
 
   async componentDidMount() {
-    const res = await axios.get("http://localhost:4000/api/functions/");
+    const res = await axios.get("/api/functions/");
     this.setState({ passes: res.data });
     console.log(this.props.match.params.id);
     if (this.props.match.params.id) {
       const res = await axios.get(
-        "http://localhost:4000/api/functions/" + this.props.match.params.id
+        "/api/functions/" + this.props.match.params.id
       );
       this.setState({
         web: res.data.web,
@@ -52,12 +52,12 @@ export default class CreatePass extends Component {
     };
     if (this.state.editing) {
       await axios.put(
-        "http://localhost:4000/api/functions/" + this.state._id,
+        "/api/functions/" + this.state._id,
         newPass
       );
       M.toast({ html: "Pass edited" });
     } else {
-      await axios.post("http://localhost:4000/api/functions", newPass);
+      await axios.post("/api/functions", newPass);
       this.setState({
         web: "",
         user: "",

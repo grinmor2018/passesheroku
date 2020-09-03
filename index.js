@@ -2,7 +2,10 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 const path = require('path');
-require ('dotenv').config();
+
+if(process.env.NODE_ENV !== 'production'){
+    require ('dotenv').config();
+}
 const { mongoose } = require('./database');
 
 // settings

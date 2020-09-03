@@ -26,12 +26,12 @@ class PassesList extends Component {
   }
 
   async getPasses() {
-    const res = await axios.get("http://localhost:4000/api/functions");
+    const res = await axios.get("/api/functions");
     this.setState({ passes: res.data });
   }
 
   async deletePass(id) {
-    await axios.delete("http://localhost:4000/api/functions/" + id);
+    await axios.delete("/api/functions/" + id);
     this.getPasses();
   }
 
