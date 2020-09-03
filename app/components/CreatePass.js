@@ -98,7 +98,7 @@ export default class CreatePass extends Component {
             </div>
 
             <div className="row">
-              <div class="input-field col s6">
+              <div className="input-field col s6">
                 <input
                   className="autocomplete"
                   name="user"
@@ -123,7 +123,7 @@ export default class CreatePass extends Component {
               </div>
             </div>
             <div className="row">
-              <div class="input-field col s12">
+              <div className="input-field col s12">
                 <input
                   name="email"
                   onChange={this.handleChange}
@@ -135,7 +135,7 @@ export default class CreatePass extends Component {
               </div>
             </div>
             <div className="row">
-              <div class="input-field col s12">
+              <div className="input-field col s12">
                 <input
                   name="clave"
                   onChange={this.handleChange}
@@ -147,7 +147,7 @@ export default class CreatePass extends Component {
               </div>
             </div>
             <div className="row">
-              <div class="input-field col s12">
+              <div className="input-field col s12">
                 <textarea
                   name="observations"
                   onChange={this.handleChange}
