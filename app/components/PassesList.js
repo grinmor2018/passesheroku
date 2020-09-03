@@ -112,13 +112,6 @@ class PassesList extends Component {
           <div className="card grey lighten-1 p-4">
             <h3>Passes list</h3>
             <form className="form-inline my-2 my-lg-0">
-              <input
-                className="form-control mr-sm-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-                onChange={this.filterUpdate}
-              />
               <p>
                 <label>
                   <input class="with-gap" name="group3" type="radio" checked />
@@ -137,6 +130,13 @@ class PassesList extends Component {
                   <span>Email</span>
                 </label>
               </p>
+              <input
+                className="form-control mr-sm-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+                onChange={this.filterUpdate}
+              />
             </form>
           </div>
 
