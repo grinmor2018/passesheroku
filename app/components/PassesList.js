@@ -114,61 +114,42 @@ class PassesList extends Component {
             <form action="#">
               <p>
                 <label>
-                  <input name="group1" type="radio" checked />
+                  <input
+                    className="with-gap"
+                    name="radio3"
+                    type="radio"
+                    id="webSearch"
+                    value="web"
+                    checked
+                  />
                   <span>Web</span>
                 </label>
               </p>
               <p>
                 <label>
-                  <input name="group1" type="radio" />
+                  <input
+                    className="with-gap"
+                    name="radio3"
+                    type="radio"
+                    id="userSearch"
+                    value="user"
+                  />
                   <span>User</span>
                 </label>
               </p>
               <p>
                 <label>
-                  <input class="with-gap" name="group1" type="radio" />
+                  <input
+                    className="with-gap"
+                    name="radio3"
+                    type="radio"
+                    id="emailSearch"
+                    value="email"
+                  />
                   <span>Gmail</span>
                 </label>
               </p>
             </form>
-
-            <div class="form-check">
-              <input
-                class="form-check-input"
-                type="radio"
-                name="colSearch"
-                id="colSearch1"
-                value="web"
-                checked
-              />
-              <label class="form-check-label" for="colSearch1">
-                Web
-              </label>
-            </div>
-            <div className="form-check">
-              <input
-                className="form-check-input"
-                type="radio"
-                name="colSearch"
-                id="colSearch2"
-                value="user"
-              />
-              <label className="form-check-label" for="colSearch2">
-                User
-              </label>
-            </div>
-            <div className="form-check">
-              <input
-                className="form-check-input"
-                type="radio"
-                name="colSearch"
-                id="colSearch3"
-                value="email"
-              />
-              <label className="form-check-label" for="colSearch3">
-                Email
-              </label>
-            </div>
 
             <div className="row">
               <div className="col-12">
