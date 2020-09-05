@@ -49,6 +49,7 @@ class PassesList extends Component {
       searchItem: e.target.value.toString,
     });
     console.log(e.target.value);
+    console.log(this.state.searchItem);
   }
 
   render() {
@@ -150,7 +151,7 @@ class PassesList extends Component {
                   id="emailSearch"
                   value="email"
                 />
-                <span>Gmail</span>
+                <span>Email</span>
               </label>
             </form>
 
@@ -190,13 +191,15 @@ class PassesList extends Component {
                           .toLowerCase()
                           .indexOf(this.state.filterText.toLowerCase()) >= 0
                       );
-                    } else if (this.state.searchItem === "email") {
+                    }
+                    if (this.state.searchItem === "email") {
                       return (
                         name.email
                           .toLowerCase()
                           .indexOf(this.state.filterText.toLowerCase()) >= 0
                       );
-                    } else {
+                    }
+                    if (this.state.searchItem === "web") {
                       return (
                         name.web
                           .toLowerCase()
