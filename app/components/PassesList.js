@@ -113,16 +113,16 @@ class PassesList extends Component {
             <h3>Passes list</h3>
             
               
-                <div className="form-check">
+                <div class="form-check">
                   <input
-                    className="form-check-input"
+                    class="form-check-input"
                     type="radio"
                     name="colSearch"
                     id="colSearch1"
                     value="web"
                     checked
                   />
-                  <label className="form-check-label" for="colSearch1">
+                  <label class="form-check-label" for="colSearch1">
                     Web
                   </label>
                 </div>
