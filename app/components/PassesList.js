@@ -17,7 +17,7 @@ class PassesList extends Component {
       _id: "",
       showing: false,
       pass2show: [],
-      searchItem:""
+      searchItem: "",
     };
     this.filterUpdate = this.filterUpdate.bind(this);
   }
@@ -41,6 +41,12 @@ class PassesList extends Component {
   filterUpdate(e) {
     this.setState({
       filterText: e.target.value,
+    });
+  }
+
+  setSearch(e) {
+    this.setState({
+      searchItem: e.target.value,
     });
   }
 
@@ -112,11 +118,7 @@ class PassesList extends Component {
         <div className="container p-4">
           <div className="card grey lighten-1 p-4">
             <h3>Passes list</h3>
-            <form action="#" 
-            onChange={() => {
-              (this.setState.searchItem = radio3.value)
-            }}
-              >
+            <form onChange={this.setSearch.bind(this)}>
               <label>
                 <input
                   className="with-gap"
@@ -183,7 +185,7 @@ class PassesList extends Component {
                 {this.state.passes
                   .filter((name) => {
                     return (
-                      name.searchItem
+                      name.this.state.searchItem
                         .toLowerCase()
                         .indexOf(this.state.filterText.toLowerCase()) >= 0
                     );
