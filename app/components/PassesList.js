@@ -127,7 +127,6 @@ class PassesList extends Component {
                   type="radio"
                   id="webSearch"
                   value="web"
-                  checked
                 />
                 <span>Web</span>
               </label>
