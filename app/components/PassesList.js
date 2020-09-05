@@ -114,7 +114,7 @@ class PassesList extends Component {
             <h3>Passes list</h3>
             <form action="#" 
             onChange={() => {
-              (this.state.searchItem = radio3.value)
+              (this.setState.searchItem = radio3.value)
             }}
               >
               <label>
