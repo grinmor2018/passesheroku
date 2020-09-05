@@ -8,7 +8,7 @@ export default class Navigation extends Component {
         <div className="container">
           <div className="nav-wrapper bg-dark">
             <Link className="brand-logo" to="/">
-              My Passes
+              MY PASSES
             </Link>
           </div>
 

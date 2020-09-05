@@ -112,7 +112,7 @@ class PassesList extends Component {
           <div className="card grey lighten-1 p-4">
             <h3>Passes list</h3>
             
-              <div className="row">
+              
                 <div className="form-check">
                   <input
                     className="form-check-input"
@@ -150,7 +150,7 @@ class PassesList extends Component {
                     Email
                   </label>
                 </div>
-              </div>
+              
               <div className="row">
                 <div className="col-12">
                   <input
