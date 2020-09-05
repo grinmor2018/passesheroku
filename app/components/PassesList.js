@@ -46,7 +46,7 @@ class PassesList extends Component {
 
   setSearch(e) {
     this.setState({
-      searchItem: e.target.value.toString,
+      searchItem: e.target.value,
     });
     console.log(e.target.value);
     console.log(this.state.searchItem);
