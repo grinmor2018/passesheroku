@@ -48,7 +48,7 @@ class PassesList extends Component {
     this.setState({
       searchItem: e.target.value.toString,
     });
-    console.log(e.target.value)
+    console.log(e.target.value);
   }
 
   render() {
@@ -185,11 +185,25 @@ class PassesList extends Component {
               <tbody>
                 {this.state.passes
                   .filter((name) => {
-                    return (
-                      name.this.state.setSearch
-                        .toLowerCase()
-                        .indexOf(this.state.filterText.toLowerCase()) >= 0
-                    );
+                    if (this.state.setSearch === "user") {
+                      return (
+                        name.user
+                          .toLowerCase()
+                          .indexOf(this.state.filterText.toLowerCase()) >= 0
+                      );
+                    } else if (this.state.setSearch === "email") {
+                      return (
+                        name.email
+                          .toLowerCase()
+                          .indexOf(this.state.filterText.toLowerCase()) >= 0
+                      );
+                    } else {
+                      return (
+                        name.web
+                          .toLowerCase()
+                          .indexOf(this.state.filterText.toLowerCase()) >= 0
+                      );
+                    }
                   })
                   .sort((a, b) => a.web > b.web)
                   .map((pass) => {
