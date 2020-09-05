@@ -17,6 +17,7 @@ class PassesList extends Component {
       _id: "",
       showing: false,
       pass2show: [],
+      searchItem:""
     };
     this.filterUpdate = this.filterUpdate.bind(this);
   }
@@ -111,44 +112,44 @@ class PassesList extends Component {
         <div className="container p-4">
           <div className="card grey lighten-1 p-4">
             <h3>Passes list</h3>
-            <form action="#">
-              <p>
-                <label>
-                  <input
-                    className="with-gap"
-                    name="radio3"
-                    type="radio"
-                    id="webSearch"
-                    value="web"
-                    checked
-                  />
-                  <span>Web</span>
-                </label>
-              </p>
-              <p>
-                <label>
-                  <input
-                    className="with-gap"
-                    name="radio3"
-                    type="radio"
-                    id="userSearch"
-                    value="user"
-                  />
-                  <span>User</span>
-                </label>
-              </p>
-              <p>
-                <label>
-                  <input
-                    className="with-gap"
-                    name="radio3"
-                    type="radio"
-                    id="emailSearch"
-                    value="email"
-                  />
-                  <span>Gmail</span>
-                </label>
-              </p>
+            <form action="#" 
+            onChange={() => {
+              (this.state.searchItem = radio3.value)
+            }}
+              >
+              <label>
+                <input
+                  className="with-gap"
+                  name="radio3"
+                  type="radio"
+                  id="webSearch"
+                  value="web"
+                  checked
+                />
+                <span>Web</span>
+              </label>
+
+              <label>
+                <input
+                  className="with-gap"
+                  name="radio3"
+                  type="radio"
+                  id="userSearch"
+                  value="user"
+                />
+                <span>User</span>
+              </label>
+
+              <label>
+                <input
+                  className="with-gap"
+                  name="radio3"
+                  type="radio"
+                  id="emailSearch"
+                  value="email"
+                />
+                <span>Gmail</span>
+              </label>
             </form>
 
             <div className="row">
@@ -182,7 +183,7 @@ class PassesList extends Component {
                 {this.state.passes
                   .filter((name) => {
                     return (
-                      name.web
+                      name.searchItem
                         .toLowerCase()
                         .indexOf(this.state.filterText.toLowerCase()) >= 0
                     );
