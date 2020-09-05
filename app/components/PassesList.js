@@ -191,15 +191,13 @@ class PassesList extends Component {
                           .toLowerCase()
                           .indexOf(this.state.filterText.toLowerCase()) >= 0
                       );
-                    }
-                    if (this.state.searchItem === "email") {
+                    } else if (this.state.searchItem === "email") {
                       return (
                         name.email
                           .toLowerCase()
                           .indexOf(this.state.filterText.toLowerCase()) >= 0
                       );
-                    }
-                    if (this.state.searchItem === "web") {
+                    } else {
                       return (
                         name.web
                           .toLowerCase()
