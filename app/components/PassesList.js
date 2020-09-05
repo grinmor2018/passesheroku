@@ -46,8 +46,9 @@ class PassesList extends Component {
 
   setSearch(e) {
     this.setState({
-      searchItem: e.target.value,
+      searchItem: e.target.value.toString,
     });
+    console.log(e.target.value)
   }
 
   render() {
@@ -185,7 +186,7 @@ class PassesList extends Component {
                 {this.state.passes
                   .filter((name) => {
                     return (
-                      name.this.state.searchItem
+                      name.this.state.setSearch
                         .toLowerCase()
                         .indexOf(this.state.filterText.toLowerCase()) >= 0
                     );
