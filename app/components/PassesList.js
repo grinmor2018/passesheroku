@@ -111,59 +111,77 @@ class PassesList extends Component {
         <div className="container p-4">
           <div className="card grey lighten-1 p-4">
             <h3>Passes list</h3>
-            
-              
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="colSearch"
-                    id="colSearch1"
-                    value="web"
-                    checked
-                  />
-                  <label class="form-check-label" for="colSearch1">
-                    Web
-                  </label>
-                </div>
-                <div className="form-check">
-                  <input
-                    className="form-check-input"
-                    type="radio"
-                    name="colSearch"
-                    id="colSearch2"
-                    value="user"
-                  />
-                  <label className="form-check-label" for="colSearch2">
-                    User
-                  </label>
-                </div>
-                <div className="form-check">
-                  <input
-                    className="form-check-input"
-                    type="radio"
-                    name="colSearch"
-                    id="colSearch3"
-                    value="email"
-                  />
-                  <label className="form-check-label" for="colSearch3">
-                    Email
-                  </label>
-                </div>
-              
-              <div className="row">
-                <div className="col-12">
-                  <input
-                    className="form-control"
-                    name="search"
-                    type="search"
-                    placeholder="Search"
-                    aria-label="Search"
-                    onChange={this.filterUpdate}
-                  />
-                </div>
+            <form action="#">
+              <p>
+                <label>
+                  <input name="group1" type="radio" checked />
+                  <span>Web</span>
+                </label>
+              </p>
+              <p>
+                <label>
+                  <input name="group1" type="radio" />
+                  <span>User</span>
+                </label>
+              </p>
+              <p>
+                <label>
+                  <input class="with-gap" name="group1" type="radio" />
+                  <span>Gmail</span>
+                </label>
+              </p>
+            </form>
+
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="colSearch"
+                id="colSearch1"
+                value="web"
+                checked
+              />
+              <label class="form-check-label" for="colSearch1">
+                Web
+              </label>
+            </div>
+            <div className="form-check">
+              <input
+                className="form-check-input"
+                type="radio"
+                name="colSearch"
+                id="colSearch2"
+                value="user"
+              />
+              <label className="form-check-label" for="colSearch2">
+                User
+              </label>
+            </div>
+            <div className="form-check">
+              <input
+                className="form-check-input"
+                type="radio"
+                name="colSearch"
+                id="colSearch3"
+                value="email"
+              />
+              <label className="form-check-label" for="colSearch3">
+                Email
+              </label>
+            </div>
+
+            <div className="row">
+              <div className="col-12">
+                <input
+                  className="form-control"
+                  name="search"
+                  type="search"
+                  placeholder="Search"
+                  aria-label="Search"
+                  onChange={this.filterUpdate}
+                />
               </div>
-            
+            </div>
           </div>
 
           <div className="card grey lighten-2 p-4">
