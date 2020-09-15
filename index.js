@@ -3,7 +3,6 @@ const app = express();
 const cors = require('cors');
 const path = require('path');
 
-const serviceWorker = require ('./serviceWorker');
 
 if(process.env.NODE_ENV !== 'production'){
     require ('dotenv').config();
@@ -11,7 +10,6 @@ if(process.env.NODE_ENV !== 'production'){
 const { mongoose } = require('./database');
 
 
-serviceWorker.register();
 
 // settings
 app.set('port', process.env.PORT || 4000);
