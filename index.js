@@ -3,7 +3,7 @@ const app = express();
 const cors = require('cors');
 const path = require('path');
 
-import * as serviceWorker from './serviceWorker';
+const serviceWorker = require ('./serviceWorker');
 
 if(process.env.NODE_ENV !== 'production'){
     require ('dotenv').config();
